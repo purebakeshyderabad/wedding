@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Cake Gallery | Pure Bakes Hyderabad</title>
+<meta name="description" content="Browse 50+ custom Wedding Cake designs by Pure Bakes Hyderabad — multi-tier, sugar flowers, fondant art, eggless options. Click any photo to view full size.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px;overflow-x:hidden}
+body{font-family:"Jost",sans-serif;color:#2a2230;background:#fff;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+:root{--dark:#2a2230;--mid:#5c5170;--muted:#9a93a8;--white:#fff;--border:#e4ddf0;--lav:#d4c8e8;--lav-pale:#f3f0f9;--lav-p:#e8dff5;--lav-deep:#9b88c0;--gold:#c9a84c;--gold-bg:rgba(201,168,76,.1);--night:#0c0916}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 1.25rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 1.25rem;background:rgba(12,9,22,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);transition:background .3s}
+.nav-logo{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:700;color:#fff}
+.nav-logo span{color:var(--gold);font-style:italic}
+.nav-links{display:none;list-style:none;gap:1.6rem;align-items:center}
+.nav-links a{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links .nav-cta{background:var(--lav-deep);color:#fff;padding:.4rem 1rem;border-radius:100px}
+.nav-links .nav-cta:hover{background:#8876b0}
+.hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(min-width:800px){.nav-links{display:flex}.hamburger{display:none}}
+
+/* MOBILE MENU */
+#mob-menu{display:none;position:fixed;inset:0;z-index:950;background:rgba(12,9,22,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.8rem}
+#mob-menu.open{display:flex}
+#mob-menu a{font-size:1.25rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .2s;padding:.3rem}
+#mob-menu a:hover{color:#fff}
+#mob-menu .mob-cta{background:var(--lav-deep);color:#fff;padding:.75rem 2.5rem;border-radius:100px;font-size:1rem}
+#mob-menu .mob-x{position:absolute;top:1.2rem;right:1.2rem;background:rgba(255,255,255,.1);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+
+/* PAGE HERO */
+.page-hero{padding:8rem 0 5rem;background:linear-gradient(160deg,var(--night) 0%,#1a0e28 100%);position:relative;overflow:hidden;text-align:center}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(155,136,192,.14) 0%,transparent 70%);pointer-events:none}
+.page-hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,var(--lav-pale));pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.hero-eyebrow::before{content:"";width:20px;height:1.5px;background:var(--gold);display:inline-block}
+.page-hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;line-height:1.05;color:#fff;margin-bottom:.8rem;letter-spacing:-.02em}
+.page-hero h1 em{font-style:italic;color:var(--gold)}
+.page-hero-sub{font-size:.9rem;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 2rem;line-height:1.72}
+.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.hero-stats{display:none;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.hstat strong{display:block;font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
+.hstat span{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+
+/* BTNs */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:"Jost",sans-serif;font-weight:700;border:none;border-radius:12px;cursor:pointer;transition:all .22s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.btn-gold{background:var(--gold);color:#fff;padding:.8rem 1.8rem;font-size:.9rem;box-shadow:0 4px 18px rgba(201,168,76,.4)}
+.btn-gold:hover{background:#b89240;transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#fff;padding:.78rem 1.6rem;font-size:.88rem;box-shadow:0 4px 16px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#1cb956;transform:translateY(-1px)}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.2);padding:.78rem 1.6rem;font-size:.88rem;border-radius:12px;font-family:"Jost",sans-serif;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-ghost-light:hover{background:rgba(255,255,255,.15)}
+
+/* FILTER BAR */
+.filter-bar{background:var(--lav-pale);padding:1.15rem 0;border-bottom:1px solid var(--lav);position:sticky;top:64px;z-index:100;display: none}
+.filter-scroll{display:flex;gap:.45rem;overflow-x:auto;padding:0 1.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filter-scroll::-webkit-scrollbar{display:none}
+.filter-btn{flex-shrink:0;padding:.4rem 1rem;border-radius:100px;border:1.5px solid var(--lav);background:#fff;font-family:"Jost",sans-serif;font-size:.75rem;font-weight:600;color:var(--mid);cursor:pointer;transition:all .2s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.filter-btn:hover{border-color:var(--lav-deep);color:var(--lav-deep)}
+.filter-btn.active{background:var(--lav-deep);border-color:var(--lav-deep);color:#fff}
+
+/* GALLERY SECTION */
+.gallery-sec{background:var(--lav-pale);padding:2rem 0 5rem}
+.masonry{columns:2;column-gap:.7rem}
+@media(min-width:560px){.masonry{columns:3}}
+@media(min-width:860px){.masonry{columns:4}}
+
+/* CARD */
+.g-card{break-inside:avoid;margin-bottom:.7rem;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;background:linear-gradient(135deg,#2a1535,#180e24)}
+.g-card:focus-visible{outline:3px solid var(--lav-deep);outline-offset:2px}
+.g-card img{width:100%;height:auto;display:block;transition:transform .38s ease}
+.g-card:hover img{transform:scale(1.05)}
+.g-card.hidden{display:none}
+
+/* Skeleton */
+.skel{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,rgba(155,136,192,.06) 0%,rgba(155,136,192,.16) 50%,rgba(155,136,192,.06) 100%);background-size:200% 100%;animation:shim 1.6s ease-in-out infinite}
+@keyframes shim{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.g-card img.img-loaded~.skel,.g-card img.img-loaded+.skel{display:none}
+
+/* Hover overlay */
+.g-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,9,22,.85) 0%,rgba(12,9,22,.1) 55%,transparent 100%);opacity:0;transition:opacity .28s;display:flex;flex-direction:column;justify-content:flex-end;padding:.9rem}
+.g-card:hover .g-overlay{opacity:1}
+.g-name{font-family:"Cormorant Garamond",serif;font-size:.98rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:.2rem}
+.g-cat{font-size:.63rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.g-zoom{position:absolute;top:.65rem;right:.65rem;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:all .24s}
+.g-card:hover .g-zoom{opacity:1;transform:scale(1)}
+
+/* LIGHTBOX */
+#glb{display:none;position:fixed;inset:0;z-index:9900;background:rgba(7,4,14,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);flex-direction:column;align-items:center;justify-content:center}
+#glb.open{display:flex;animation:lbIn .2s ease}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+.glb-top{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.1rem;z-index:2}
+.glb-counter{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:.28rem .9rem;border-radius:100px}
+.glb-close{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.18);color:#fff;font-size:1.4rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+.glb-close:hover{background:rgba(255,255,255,.22)}
+.glb-stage{display:flex;align-items:center;justify-content:center;width:100%;flex:1;position:relative;padding:3.5rem 4.5rem}
+.glb-img-box{position:relative;max-width:min(90vw,920px);max-height:82vh;display:flex;align-items:center;justify-content:center}
+#glb-img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:12px;box-shadow:0 28px 80px rgba(0,0,0,.85);display:block}
+.glb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.18);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;-webkit-tap-highlight-color:transparent;z-index:2;flex-shrink:0}
+.glb-arrow:hover{background:rgba(255,255,255,.22);transform:translateY(-50%) scale(1.08)}
+.glb-arrow:active{transform:translateY(-50%) scale(.95)}
+.glb-prev{left:.6rem}
+.glb-next{right:.6rem}
+.glb-info{text-align:center;padding:.5rem 1rem .2rem}
+.glb-title{font-family:"Cormorant Garamond",serif;font-size:1.05rem;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:.2rem}
+.glb-meta{font-size:.68rem;color:rgba(255,255,255,.36);letter-spacing:.1em;text-transform:uppercase}
+.glb-thumbs{display:flex;gap:.38rem;padding:.55rem .7rem;background:rgba(12,9,22,.7);backdrop-filter:blur(10px);border-radius:100px;border:1px solid rgba(255,255,255,.1);max-width:min(92vw,520px);overflow-x:auto;scrollbar-width:none;margin-bottom:.8rem}
+.glb-thumbs::-webkit-scrollbar{display:none}
+.glb-thumb{width:34px;height:34px;border-radius:7px;overflow:hidden;flex-shrink:0;cursor:pointer;opacity:.4;border:2px solid transparent;transition:all .2s}
+.glb-thumb img{width:100%;height:100%;object-fit:cover}
+.glb-thumb.active{opacity:1;border-color:var(--gold)}
+.glb-thumb:hover:not(.active){opacity:.75}
+@media(max-width:580px){
+  .glb-stage{padding:3rem 3.5rem}
+  .glb-arrow{width:40px;height:40px}
+  .glb-prev{left:.2rem}
+  .glb-next{right:.2rem}
+  .glb-thumbs{display:none}
+}
+
+/* EMPTY STATE */
+.empty-state{display:none;text-align:center;padding:4rem 1rem;color:var(--muted)}
+.empty-state.vis{display:block}
+.empty-state p{font-size:.9rem;line-height:1.6}
+
+/* CTA STRIP */
+.cta-strip{background:linear-gradient(145deg,#180f28,#261040,#180f28);padding:4.5rem 0;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(201,168,76,.08) 0%,transparent 70%);pointer-events:none}
+.cta-strip h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;color:#fff;margin-bottom:.7rem;line-height:1.1}
+.cta-strip h2 em{font-style:italic;color:var(--gold)}
+.cta-strip p{font-size:.88rem;color:rgba(255,255,255,.48);max-width:440px;margin:0 auto 1.8rem;line-height:1.72}
+.cta-btns{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+
+/* SOCIAL BAR */
+.social-bar{background:#07040e;padding:2.5rem 0;border-top:1px solid rgba(255,255,255,.07)}
+.social-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;margin-bottom:1.2rem}
+.social-icons{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-bottom:1rem}
+.soc{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:transform .2s,opacity .2s;border:none}
+.soc:hover{transform:translateY(-4px);opacity:.88}
+.soc-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.soc-fb{background:#1877f2}.soc-yt{background:#ff0000}.soc-wa{background:#25d366}.soc-gm{background:#4285f4}
+.social-handle{text-align:center;font-size:.76rem;color:rgba(255,255,255,.28)}
+
+/* FOOTER */
+footer{background:#07040e;padding:2rem 1.25rem;text-align:center;border-top:1px solid rgba(255,255,255,.05)}
+.foot-logo{font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.65rem}
+.foot-logo span{color:var(--gold);font-style:italic}
+.foot-links{display:flex;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin-bottom:.75rem}
+.foot-links a{font-size:.76rem;color:rgba(255,255,255,.32);transition:color .2s}
+.foot-links a:hover{color:rgba(255,255,255,.65)}
+footer p{font-size:.68rem;color:rgba(255,255,255,.18)}
+
+/* ORDER MODAL */
+#order-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(12,9,22,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);align-items:flex-end;justify-content:center}
+#order-modal.open{display:flex}
+.modal-panel{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;padding:1.6rem 1.4rem 2.5rem;position:relative;box-shadow:0 -20px 70px rgba(0,0,0,.55);animation:slideUp .3s cubic-bezier(.22,1,.36,1);-webkit-overflow-scrolling:touch}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-handle{width:38px;height:4px;background:var(--border);border-radius:4px;margin:0 auto 1.4rem}
+.modal-x{position:absolute;top:1.1rem;right:1.1rem;width:34px;height:34px;border-radius:50%;background:var(--lav-pale);border:none;color:var(--mid);font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.modal-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.45rem;margin-bottom:.45rem}
+.modal-eyebrow::before{content:"";width:14px;height:1.5px;background:var(--gold)}
+.modal-title{font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-weight:700;color:var(--dark);margin-bottom:.35rem;line-height:1.1}
+.modal-title em{font-style:italic;color:var(--lav-deep)}
+.modal-sub{font-size:.8rem;color:var(--muted);margin-bottom:1.4rem}
+.form-grp{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.form-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.occ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem;margin-top:.25rem}
+.occ-btn{padding:.55rem .4rem;border-radius:10px;border:1.5px solid var(--border);background:#fff;font-family:"Jost",sans-serif;font-size:.76rem;font-weight:500;color:var(--mid);cursor:pointer;transition:all .2s;text-align:center;-webkit-tap-highlight-color:transparent}
+.occ-btn:hover,.occ-btn.active{background:var(--lav-p);border-color:var(--lav-deep);color:var(--lav-deep)}
+input[type=date]{width:100%;padding:.85rem 1rem;border:1.5px solid var(--border);border-radius:12px;font-family:"Jost",sans-serif;font-size:.9rem;color:var(--dark);background:#fff;min-height:50px;-webkit-appearance:none;outline:none;transition:border-color .2s}
+input[type=date]:focus{border-color:var(--lav-deep)}
+.btn-wa-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:.6rem;background:#25d366;color:#fff;padding:.95rem;border:none;border-radius:14px;font-family:"Jost",sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;box-shadow:0 5px 20px rgba(37,211,102,.35);transition:all .2s;min-height:54px;-webkit-tap-highlight-color:transparent}
+.btn-wa-submit:hover{background:#1cb956}
+.form-note{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.65rem;line-height:1.5}
+@media(min-width:560px){#order-modal{align-items:center;padding:1.5rem}.modal-panel{border-radius:20px}}
+
+/* FLOATING BTNS */
+#wa-float{position:fixed;bottom:1.4rem;right:1.2rem;z-index:800;width:54px;height:54px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 22px rgba(37,211,102,.5);-webkit-tap-highlight-color:transparent;animation:wap 2.5s ease-in-out infinite}
+#wa-float:hover{animation:none;transform:scale(1.1)}
+@keyframes wap{0%,100%{box-shadow:0 5px 22px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.35)}50%{box-shadow:0 5px 22px rgba(37,211,102,.5),0 0 0 10px rgba(37,211,102,0)}}
+#scroll-top{position:fixed;bottom:5.2rem;right:1.2rem;z-index:800;width:42px;height:42px;border-radius:50%;background:var(--dark);border:1.5px solid rgba(255,255,255,.12);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s,background .2s;-webkit-tap-highlight-color:transparent}
+#scroll-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#scroll-top:hover{background:var(--lav-deep)}
+@media(max-width:380px){.wrap{padding:0 1rem}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html"><img alt="Pure Bakes | Wedding Cakes" src="../img/pure-bakes-logo.png" style="height:6rem;margin-top:1rem"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="#" class="nav-cta" onclick="event.preventDefault();openModal()">Order Now</a></li>
+  </ul>
+  <button class="hamburger" id="ham" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu">
+  <button class="mob-x" onclick="closeMenu()">×</button>
+  <a href="index.html#about" onclick="closeMenu()">About</a>
+  <a href="index.html#process" onclick="closeMenu()">Process</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="index.html#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="index.html#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#" class="mob-cta" onclick="closeMenu();openModal()">Order Your Cake</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="hero-eyebrow">Pure Bakes · Hyderabad</div>
+    <h1>Our Cake <em>Gallery</em></h1>
+    <p class="page-hero-sub">Every photo is a real cake made for a real couple in Hyderabad — no stock images. Browse, get inspired, and let us create yours.</p>
+    <div class="hero-btns">
+      <button onclick="openModal()" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        Order a Similar Cake
+      </button>
+      <a href="https://www.instagram.com/pure_bakes_hyderabad/" target="_blank" rel="noopener" class="btn-ghost-light">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        More on Instagram
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><strong>500+</strong><span>Cakes Made</span></div>
+      <div class="hstat"><strong>100%</strong><span>Fresh &amp; Home Baked</span></div>
+      <div class="hstat"><strong>5.0★</strong><span>Google Rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-scroll" id="filter-scroll">
+    <button class="filter-btn active" data-filter="all">All Cakes</button>
+    <button class="filter-btn" data-filter="wedding">💍 Wedding</button>
+    <button class="filter-btn" data-filter="engagement">💐 Engagement</button>
+    <button class="filter-btn" data-filter="floral">🌸 Floral</button>
+    <button class="filter-btn" data-filter="gold">✨ Gold &amp; Glamour</button>
+    <button class="filter-btn" data-filter="royal">🏰 Royal Indian</button>
+    <button class="filter-btn" data-filter="minimal">🕊️ Minimalist</button>
+    <button class="filter-btn" data-filter="mehendi">🌿 Mehendi</button>
+    <button class="filter-btn" data-filter="reception">🍾 Reception</button>
+    <button class="filter-btn" data-filter="eggless">🍃 Eggless</button>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <div class="masonry" id="masonry">
+
+      <div class="g-card" data-cat="wedding floral" data-title="Elegant Pink Floral Engagement Cake" data-meta="Wedding · Jubilee Hills" tabindex="0" role="button" aria-label="View: Elegant Pink Floral Engagement Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/1.png" alt="Elegant Pink Floral Engagement Cake — Pure Bakes Hyderabad" loading="eager" width="600" height="800">
+        <div class="g-overlay">
+          <div class="g-name">Elegant Pink Floral Engagement Cake</div>
+          <div class="g-cat">💍 Wedding</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="wedding gold" data-title="Elegant Pink Floral Wedding Cake" data-meta="Wedding · Banjara Hills" tabindex="0" role="button" aria-label="View: Elegant Pink Floral Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/2.png" alt="Elegant Pink Floral Wedding Cake — Pure Bakes Hyderabad" loading="eager" width="600" height="750">
+        <div class="g-overlay">
+          <div class="g-name">Elegant Pink Floral Wedding Cake</div>
+          <div class="g-cat">✨ Gold &amp; Glamour</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="wedding floral" data-title="Romantic Floral Two Tier Wedding Cake" data-meta="Wedding · HITEC City" tabindex="0" role="button" aria-label="View: Romantic Floral Two Tier Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/3.png" alt="Romantic Floral Two Tier Wedding Cake — Pure Bakes Hyderabad" loading="eager" width="600" height="700">
+        <div class="g-overlay">
+          <div class="g-name">Romantic Floral Two Tier Wedding Cake</div>
+          <div class="g-cat">🌸 Floral</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement floral" data-title="Sparkling Red Three Tier Wedding Cake" data-meta="Engagement · Kondapur" tabindex="0" role="button" aria-label="View: Sparkling Red Three Tier Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/4.png" alt="Sparkling Red Three Tier Wedding Cake — Pure Bakes Hyderabad" loading="eager" width="600" height="680">
+        <div class="g-overlay">
+          <div class="g-name">Sparkling Red Three Tier Wedding Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="royal gold wedding" data-title="She Said Yes Engagement Cake" data-meta="Wedding · Secunderabad" tabindex="0" role="button" aria-label="View: She Said Yes Engagement Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/5.png" alt="She Said Yes Engagement Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="900">
+        <div class="g-overlay">
+          <div class="g-name">She Said Yes Engagement Cake</div>
+          <div class="g-cat">🏰 Royal Indian</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="mehendi floral" data-title="Luxury Engagement Cake with Butterflies" data-meta="Mehendi · Gachibowli" tabindex="0" role="button" aria-label="View: Luxury Engagement Cake with Butterflies">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/6.png" alt="Luxury Engagement Cake with Butterflies — Pure Bakes Hyderabad" loading="lazy" width="600" height="620">
+        <div class="g-overlay">
+          <div class="g-name">Luxury Engagement Cake with Butterflies</div>
+          <div class="g-cat">🌿 Mehendi</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="minimal wedding eggless" data-title="Happily Ever After Wedding Cake" data-meta="Wedding · Madhapur" tabindex="0" role="button" aria-label="View: Happily Ever After Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/7.png" alt="Happily Ever After Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="760">
+        <div class="g-overlay">
+          <div class="g-name">Happily Ever After Wedding Cake</div>
+          <div class="g-cat">🕊️ Minimalist</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="reception gold" data-title="Pastel Floral Cascade Wedding Cake" data-meta="Reception · Jubilee Hills" tabindex="0" role="button" aria-label="View: Pastel Floral Cascade Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/8.png" alt="Pastel Floral Cascade Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="830">
+        <div class="g-overlay">
+          <div class="g-name">Pastel Floral Cascade Wedding Cake</div>
+          <div class="g-cat">🍾 Reception</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="eggless floral wedding" data-title="Three Tier Engagement Cake with Gold Drip" data-meta="Wedding · Kukatpally" tabindex="0" role="button" aria-label="View: Three Tier Engagement Cake with Gold Drip">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/9.png" alt="Three Tier Engagement Cake with Gold Drip — Pure Bakes Hyderabad" loading="lazy" width="600" height="720">
+        <div class="g-overlay">
+          <div class="g-name">Three Tier Engagement Cake with Gold Drip</div>
+          <div class="g-cat">🍃 Eggless</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="royal wedding gold" data-title="Metallic Textured Floral Proposal Cake" data-meta="Wedding · Banjara Hills" tabindex="0" role="button" aria-label="View: Metallic Textured Floral Proposal Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/10.png" alt="Metallic Textured Floral Proposal Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="920">
+        <div class="g-overlay">
+          <div class="g-name">Metallic Textured Floral Proposal Cake</div>
+          <div class="g-cat">🏰 Royal Indian</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal" data-title="Gold Ombre Engaged Floral Cake" data-meta="Engagement · HITEC City" tabindex="0" role="button" aria-label="View: Gold Ombre Engaged Floral Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/11.png" alt="Gold Ombre Engaged Floral Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="650">
+        <div class="g-overlay">
+          <div class="g-name">Gold Ombre Engaged Floral Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="reception gold royal" data-title="White Wedding Cake with Red Roses" data-meta="Reception · Secunderabad" tabindex="0" role="button" aria-label="View: White Wedding Cake with Red Roses">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/12.png" alt="White Wedding Cake with Red Roses — Pure Bakes Hyderabad" loading="lazy" width="600" height="880">
+        <div class="g-overlay">
+          <div class="g-name">White Wedding Cake with Red Roses</div>
+          <div class="g-cat">🍾 Reception</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="mehendi floral eggless" data-title="Colorful Engagement Cake with Gold Accents" data-meta="Haldi · Gachibowli" tabindex="0" role="button" aria-label="View: Colorful Engagement Cake with Gold Accents">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/13.png" alt="Colorful Engagement Cake with Gold Accents — Pure Bakes Hyderabad" loading="lazy" width="600" height="700">
+        <div class="g-overlay">
+          <div class="g-name">Colorful Engagement Cake with Gold Accents</div>
+          <div class="g-cat">🌿 Mehendi</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="minimal gold wedding" data-title="Personalized Couple Name Wedding Cake" data-meta="Wedding · Jubilee Hills" tabindex="0" role="button" aria-label="View: Personalized Couple Name Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/14.png" alt="Personalized Couple Name Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="810">
+        <div class="g-overlay">
+          <div class="g-name">Personalized Couple Name Wedding Cake</div>
+          <div class="g-cat">✨ Gold &amp; Glamour</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="eggless floral engagement" data-title="Gold and Ivory Wedding Cake" data-meta="Engagement · Kondapur" tabindex="0" role="button" aria-label="View: Gold and Ivory Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/15.png" alt="Gold and Ivory Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="730">
+        <div class="g-overlay">
+          <div class="g-name">Gold and Ivory Wedding Cake</div>
+          <div class="g-cat">🍃 Eggless</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="royal wedding" data-title="Mutli Tier Luxury Wedding Cake" data-meta="Wedding · Old Hyderabad" tabindex="0" role="button" aria-label="View: Mutli Tier Luxury Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/16.png" alt="Mutli Tier Luxury Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="870">
+        <div class="g-overlay">
+          <div class="g-name">Mutli Tier Luxury Wedding Cake</div>
+          <div class="g-cat">🏰 Royal Indian</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="reception floral" data-title="Luxury Bridal Shower Celebration Cake" data-meta="Reception · Madhapur" tabindex="0" role="button" aria-label="View: Luxury Bridal Shower Celebration Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/17.png" alt="Luxury Bridal Shower Celebration Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="660">
+        <div class="g-overlay">
+          <div class="g-name">Luxury Bridal Shower Celebration Cake</div>
+          <div class="g-cat">🍾 Bride Shower</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="eggless gold wedding" data-title="Luxury Navy Fondant Designer Cake" data-meta="Wedding · Kukatpally" tabindex="0" role="button" aria-label="View: Luxury Navy Fondant Designer Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/18.png" alt="Luxury Navy Fondant Designer Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="780">
+        <div class="g-overlay">
+          <div class="g-name">Luxury Navy Fondant Designer Cake</div>
+          <div class="g-cat">🍃 Eggless</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="wedding floral" data-title="Gold Accent Celebration Engagement Cake" data-meta="Wedding · Kondapur" tabindex="0" role="button" aria-label="View: Gold Accent Celebration Engagement Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/19.png" alt="Gold Accent Celebration Engagement Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="840">
+        <div class="g-overlay">
+          <div class="g-name">Gold Accent Celebration Engagement Cake</div>
+          <div class="g-cat">🌸 Floral</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Royal Theme Black Gold Wedding Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Royal Theme Black Gold Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/20.png" alt="Royal Theme Black Gold Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Royal Theme Black Gold Wedding Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Three Tier Floral Wedding Cake Design" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="Three Tier Floral Wedding Cake Design">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/21.png" alt="Three Tier Floral Wedding Cake Design — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Three Tier Floral Wedding Cake Design</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Engagement Cake with Clear Spacer" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Engagement Cake with Clear Spacer">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/22.png" alt="Engagement Cake with Clear Spacer — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Engagement Cake with Clear Spacer</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Custom Initials Gold Leaf Wedding Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Custom Initials Gold Leaf Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/23.png" alt="Custom Initials Gold Leaf Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Custom Initials Gold Leaf Wedding Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Gold Leaf Monogram Celebration Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Gold Leaf Monogram Celebration Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/24.png" alt="Gold Leaf Monogram Celebration Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Gold Leaf Monogram Celebration Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Personalized Photo Cake With Calendar wedding cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Personalized Photo Cake With Calendar wedding cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/25.png" alt="Personalized Photo Cake With Calendar wedding cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Personalized Photo Cake With Calendar wedding cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Modern Minimalist Wedding Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Modern Minimalist Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/26.png" alt="Modern Minimalist Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Modern Minimalist Wedding Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Mr and Mrs Cake Topper Design" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Mr and Mrs Cake Topper Design">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/27.png" alt="Mr and Mrs Cake Topper Design — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Mr and Mrs Cake Topper Design</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Green and White Drip Wedding Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Green and White Drip Wedding Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/28.png" alt="Green and White Drip Wedding Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Green and White Drip Wedding Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Luxury Baat Pakki Cake with Ferrero Accents" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Luxury Baat Pakki Cake with Ferrero Accents">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/29.png" alt="Luxury Baat Pakki Cake with Ferrero Accents — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Luxury Baat Pakki Cake with Ferrero Accents</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Custom Couple Cake with Name Topper" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Custom Couple Cake with Name Topper">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/30.png" alt="Custom Couple Cake with Name Topper — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Custom Couple Cake with Name Topper</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Customized Name Engagement Cake with Gold Rings" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Customized Name Engagement Cake with Gold Rings">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/31.png" alt="Customized Name Engagement Cake with Gold Rings — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Customized Name Engagement Cake with Gold Rings</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="g-card" data-cat="engagement minimal gold" data-title="Engagement Celebration Custom Couple Cake" data-meta="Engagement · Banjara Hills" tabindex="0" role="button" aria-label="View: Engagement Celebration Custom Couple Cake">
+        <div class="skel"></div>
+        <img src="../img/gallery-nano/32.png" alt="Engagement Celebration Custom Couple Cake — Pure Bakes Hyderabad" loading="lazy" width="600" height="690">
+        <div class="g-overlay">
+          <div class="g-name">Engagement Celebration Custom Couple Cake</div>
+          <div class="g-cat">💐 Engagement</div>
+        </div>
+        <div class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+    </div><!-- /masonry -->
+    <div class="empty-state" id="empty-state">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64" style="margin:0 auto 1rem;opacity:.25"><circle cx="32" cy="32" r="28"/><path d="M22 38s4 6 10 6 10-6 10-6"/><circle cx="24" cy="26" r="3"/><circle cx="40" cy="26" r="3"/></svg>
+      <p>No cakes match this filter yet.<br>More photos coming soon!</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="wrap" style="position:relative;z-index:1">
+    <h2>Ready to Create Your<br><em>Dream Cake?</em></h2>
+    <p>Every cake in this gallery was designed for one couple — yours will be too. WhatsApp us your wedding date and inspiration to get started.</p>
+    <div class="cta-btns">
+      <button onclick="openModal()" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        Order Your Cake
+      </button>
+      <a href="https://wa.me/919980213333?text=Hi%20Pure%20Bakes!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20order%20a%20Wedding%20Cake." target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar">
+  <div class="wrap">
+    <div class="social-label">Follow Pure Bakes</div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/pure_bakes_hyderabad/" target="_blank" rel="noopener" class="soc soc-ig" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/pure.bakes.hyderabad/" target="_blank" rel="noopener" class="soc soc-fb" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.youtube.com/@purebakes" target="_blank" rel="noopener" class="soc soc-yt" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"/></svg></a>
+      <a href="https://wa.me/919980213333" target="_blank" rel="noopener" class="soc soc-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg></a>
+      <a href="https://maps.app.goo.gl/SZRUARuyKowdmgGu8" target="_blank" rel="noopener" class="soc soc-gm" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+    </div>
+    <div class="social-handle">@pure_bakes_hyderabad · Wedding Cakes in Hyderabad</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Pure <span>Bakes</span></div>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#process">How It Works</a>
+    <a href="#">Gallery</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#faq">FAQ</a>
+    
+    
+  </div>
+  <p>&copy; 2026 Pure Bakes Hyderabad &middot; Wedding Cakes in Hyderabad &middot; Crafted with love &#127851;</p>
+</footer>
+
+<!-- STICKY WA -->
+<button id="wa-float" onclick="window.open('https://wa.me/919980213333?text=Hi%20Pure%20Bakes!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20order%20a%20cake.','_blank')" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+</button>
+
+<!-- SCROLL TOP -->
+<button id="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- LIGHTBOX -->
+<div id="glb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="glb-top">
+    <span class="glb-counter" id="glb-counter">1 / 20</span>
+    <button class="glb-close" onclick="closeLb()" aria-label="Close">&times;</button>
+  </div>
+  <div class="glb-stage" onclick="if(event.target===this)closeLb()">
+    <button class="glb-arrow glb-prev" onclick="navLb(-1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="glb-img-box">
+      <img id="glb-img" src="" alt="">
+    </div>
+    <button class="glb-arrow glb-next" onclick="navLb(1)" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+  <div class="glb-info" id="glb-info">
+    <div class="glb-title" id="glb-title"></div>
+    <div class="glb-meta" id="glb-meta"></div>
+  </div>
+  <div class="glb-thumbs" id="glb-thumbs"></div>
+</div>
+
+<!-- ORDER MODAL -->
+<div id="order-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <button class="modal-x" onclick="closeModal()">&times;</button>
+    <div class="modal-eyebrow">Wedding Cakes in Hyderabad</div>
+    <div class="modal-title">Order Your <em>Wedding Cake</em></div>
+    <div class="modal-sub">Pick occasion &amp; date — we confirm over WhatsApp &#128172;</div>
+    <form onsubmit="handleSubmit(event)" novalidate>
+      <div class="form-grp">
+        <div class="form-lbl">What's the Occasion? *</div>
+        <div class="occ-grid">
+          <button type="button" class="occ-btn" data-val="Wedding">&#128141; Wedding</button>
+          <button type="button" class="occ-btn" data-val="Engagement">&#128144; Engagement</button>
+          <button type="button" class="occ-btn" data-val="Anniversary">&#128145; Anniversary</button>
+          <button type="button" class="occ-btn" data-val="Mehendi">&#127807; Mehendi</button>
+          <button type="button" class="occ-btn" data-val="Reception">&#127870; Reception</button>
+          <button type="button" class="occ-btn" data-val="Other">&#10024; Other</button>
+        </div>
+      </div>
+      <div class="form-grp">
+        <label class="form-lbl" for="f-date">When do you need it? *</label>
+        <input type="date" id="f-date" name="date">
+      </div>
+      <button type="submit" class="btn-wa-submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.524 5.834L.054 23.25l5.565-1.456A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.596-.504-5.088-1.38l-.363-.217-3.305.865.885-3.218-.237-.381A9.808 9.808 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        Send to WhatsApp &amp; Order
+      </button>
+      <div class="form-note">Opens WhatsApp with your details pre-filled. We reply within 2 hours!</div>
+    </form>
+  </div>
+</div>
+
+<script>
+// ── NAV
+function toggleMenu(){var m=document.getElementById('mob-menu'),h=document.getElementById('ham'),o=m.classList.toggle('open');h.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''}
+function closeMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('ham').classList.remove('open');document.body.style.overflow=''}
+window.addEventListener('scroll',function(){document.getElementById('nav').style.background=window.scrollY>60?'rgba(7,4,14,.97)':'rgba(12,9,22,.88)'},{passive:true});
+
+// ── SCROLL TOP
+function scrollToTop(){try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}}
+window.addEventListener('scroll',function(){var st=document.getElementById('scroll-top');if(st)st.classList.toggle('show',window.scrollY>400);},{passive:true});
+
+// ── ORDER MODAL
+function openModal(){document.getElementById('order-modal').classList.add('open');document.body.style.overflow='hidden';var d=document.getElementById('f-date');if(d){var n=new Date;d.min=n.toISOString().split('T')[0];if(!d.value)d.value=d.min}}
+function closeModal(){document.getElementById('order-modal').classList.remove('open');document.body.style.overflow=''}
+var selOcc='';
+document.querySelectorAll('.occ-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.occ-btn').forEach(function(x){x.classList.remove('active')});b.classList.add('active');selOcc=b.dataset.val})});
+function handleSubmit(e){e.preventDefault();if(!selOcc){alert('Please select an occasion');return}var d=document.getElementById('f-date').value;if(!d){alert('Please pick a date');return}var m=encodeURIComponent('Hi Pure Bakes! I\'d like to order a Wedding Cake.\n\n*Occasion:* '+selOcc+'\n*Date needed:* '+d+'\n\nPlease help with design and pricing!');window.open('https://wa.me/919980213333?text='+m,'_blank')}
+
+// ── FILTER
+(function(){
+  var btns=document.querySelectorAll('.filter-btn');
+  var cards=document.querySelectorAll('.g-card');
+  var empty=document.getElementById('empty-state');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      btns.forEach(function(b){b.classList.remove('active')});
+      btn.classList.add('active');
+      var f=btn.dataset.filter;
+      var n=0;
+      cards.forEach(function(c){
+        var show=f==='all'||(' '+c.dataset.cat+' ').indexOf(' '+f+' ')!==-1;
+        c.classList.toggle('hidden',!show);
+        if(show)n++;
+      });
+      empty.classList.toggle('vis',n===0);
+      btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    });
+  });
+})();
+
+// ── LIGHTBOX
+var lbCards=[],lbIdx=0;
+
+function buildCards(){lbCards=Array.from(document.querySelectorAll('.g-card:not(.hidden)'))}
+
+function openLb(card){
+  buildCards();
+  lbIdx=lbCards.indexOf(card);
+  if(lbIdx<0)lbIdx=0;
+  document.getElementById('glb').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderLb();
+  buildThumbs();
+}
+
+function closeLb(){
+  document.getElementById('glb').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function renderLb(){
+  if(!lbCards.length)return;
+  var card=lbCards[lbIdx];
+  var img=card.querySelector('img');
+  var el=document.getElementById('glb-img');
+  // Trigger animation
+  el.style.animation='none';el.offsetHeight;el.style.animation='';
+  el.src=img.src; el.alt=img.alt||'';
+  document.getElementById('glb-title').textContent=card.dataset.title||'';
+  document.getElementById('glb-meta').textContent=card.dataset.meta||'';
+  document.getElementById('glb-counter').textContent=(lbIdx+1)+' / '+lbCards.length;
+  // Sync thumbnails
+  document.querySelectorAll('.glb-thumb').forEach(function(t,i){
+    t.classList.toggle('active',i===lbIdx);
+    if(i===lbIdx)t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  });
+}
+
+function navLb(dir){
+  lbIdx=(lbIdx+dir+lbCards.length)%lbCards.length;
+  renderLb();
+}
+
+function buildThumbs(){
+  var strip=document.getElementById('glb-thumbs');
+  strip.innerHTML='';
+  lbCards.forEach(function(card,i){
+    var img=card.querySelector('img');
+    var t=document.createElement('div');
+    t.className='glb-thumb'+(i===lbIdx?' active':'');
+    var ti=document.createElement('img');
+    ti.src=img.src; ti.alt=''; ti.loading='lazy';
+    t.appendChild(ti);
+    t.addEventListener('click',function(){lbIdx=i;renderLb();});
+    strip.appendChild(t);
+  });
+}
+
+// Attach click to every card
+document.querySelectorAll('.g-card').forEach(function(c){
+  c.addEventListener('click',function(){openLb(c)});
+  c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(c)}});
+});
+
+// Keyboard in lightbox
+document.addEventListener('keydown',function(e){
+  var lb=document.getElementById('glb');
+  if(lb.classList.contains('open')){
+    if(e.key==='ArrowLeft'){e.preventDefault();navLb(-1)}
+    if(e.key==='ArrowRight'){e.preventDefault();navLb(1)}
+    if(e.key==='Escape')closeLb();
+  }
+  if(document.getElementById('order-modal').classList.contains('open')&&e.key==='Escape')closeModal();
+  if(document.getElementById('mob-menu').classList.contains('open')&&e.key==='Escape')closeMenu();
+});
+
+// Touch swipe in lightbox
+(function(){
+  var lb=document.getElementById('glb'),sx=0,sy=0;
+  lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(!lb.classList.contains('open'))return;
+    var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>48)navLb(dx<0?1:-1);
+  },{passive:true});
+})();
+
+// ── LAZY LOAD skeleton removal
+document.querySelectorAll('.g-card img').forEach(function(img){
+  function mark(){img.classList.add('img-loaded')}
+  if(img.complete&&img.naturalWidth>0)mark();
+  else{img.addEventListener('load',mark);img.addEventListener('error',function(){var s=img.parentElement.querySelector('.skel');if(s)s.style.display='none'});}
+});
+
+// ── LIGHTBOX image keyframes (re-trigger on navigate)
+(function(){
+  var style=document.createElement('style');
+  style.textContent='@keyframes lbslide{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}#glb-img{animation:lbslide .24s ease}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
